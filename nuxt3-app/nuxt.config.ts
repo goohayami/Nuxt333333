@@ -1,3 +1,4 @@
+import { defineNitroConfig } from "nitropack";
 export default defineNuxtConfig({
   css: ["/assets/style.css"],
   app: {
@@ -6,9 +7,4 @@ export default defineNuxtConfig({
       meta: [{ name: "description", content: "Nuxt 3 for beginners" }],
     },
   },
-  // nitro: {
-  //   prerender: {
-  //     routes: ["/", "/verbs", "/nouns1", "/nouns2"],
-  //   },
-  // },
 });

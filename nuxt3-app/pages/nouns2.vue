@@ -1,7 +1,7 @@
 <template>
   <div>
     <hr />
-    <h1><span>Nouns2</span> 名詞 1701-1786</h1>
+    <h1><span>Nouns2</span> 名詞 1871-</h1>
   </div>
   <div class="question">{{ question_list[0][0] }}</div>
   <input v-model="inputText" class="input_text" type="text" />
@@ -39,7 +39,7 @@ watch(inputText, () => {
   }
 });
 const question_list = ref([
-  ["あきらかにする", "clarify"],
+  ["作業中につき暫くお待ちください", "clarify"],
   ["粉々に砕く", "smash"],
   ["悲しむ", "mourn"],
   ["粉々にする", "shatter"],

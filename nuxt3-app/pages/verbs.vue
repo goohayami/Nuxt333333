@@ -6,10 +6,6 @@
   <div class="question">{{ question_list[0][0] }}</div>
   <input v-model="inputText" class="input_text" type="text" />
 
-  <!-- ゲージ -->
-  <div class="guageWrapper mb-20">
-    <!-- <div class="guage" v-bind:style="styleObject"></div> -->
-  </div>
   <!-- カウント -->
   <div class="question-counts">
     <p>正解数　{{ correct_count }}/{{ question_count }}</p>
@@ -150,6 +146,17 @@ watch(inputText, () => {
 
 <style scoped>
 .question {
+  font-size: 2rem;
+  margin-top: 0;
+}
+h1 {
+  margin-bottom: 0;
+}
+p {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+.answer {
   font-size: 2rem;
 }
 
