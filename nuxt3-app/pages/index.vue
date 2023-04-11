@@ -1,7 +1,7 @@
 <template>
   <div>
     <hr />
-    <h1>Main Page</h1>
+    <h1>Main Page88</h1>
     <button @click="handleClick">Coupon Get</button>
     <LazyCoupon v-if="show" />
   </div>
