@@ -1,16 +1,18 @@
 <template>
-  <div>
-    <hr />
-    <h1><span>Nouns1</span> 名詞 1787-1870</h1>
-  </div>
+  <div class="main">
+    <div>
+      <hr />
+      <h1><span>Nouns1</span> 名詞 1787-1870</h1>
+    </div>
 
-  <div class="question">
-    {{ question_list[0][0] }}
-    <p>正解数　{{ correct_count }}/{{ question_count }}</p>
-  </div>
-  <input v-model="inputText" class="input_text" type="text" />
+    <div class="question">
+      {{ question_list[0][0] }}
+      <p>正解数　{{ correct_count }}/{{ question_count }}</p>
+    </div>
+    <input v-model="inputText" class="input_text" type="text" />
 
-  <div class="answer"></div>
+    <div class="answer"></div>
+  </div>
 </template>
 
 <script setup>
@@ -143,6 +145,9 @@ watch(inputText, () => {
 </script>
 
 <style scoped>
+.main {
+  margin-left: 1.2rem;
+}
 .question {
   font-size: 2rem;
   margin-top: 0;

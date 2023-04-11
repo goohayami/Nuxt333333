@@ -20,5 +20,6 @@ p {
   margin-left: 1.5em;
   color: rgb(41, 123, 155);
   font-weight: bold;
+  font-size: 1.2rem;
 }
 </style>
