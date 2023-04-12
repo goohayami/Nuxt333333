@@ -4,6 +4,7 @@
     <NuxtLink href="/verbs">Verbs</NuxtLink>
     <NuxtLink href="/nouns1">Nouns1</NuxtLink>
     <NuxtLink href="/nouns2">Nouns2</NuxtLink>
+    <NuxtLink href="/adjectives">Adjectives</NuxtLink>
   </nav>
 </template>
 
