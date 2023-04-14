@@ -112,33 +112,69 @@ const len = question_list.value.length;
 const num = question_list.value.length;
 let correct_count = 0;
 let question_count = 0;
-
 watch(inputText, () => {
   const newDiv = document.querySelector(".answer");
 
   if (inputText.value == question_list.value[0][1]) {
-    // 正解した時の処理
-    // 要素を生成、テキストに正解を入れる
     const a = document.createElement("div");
-    a.textContent = question_list.value[0][1];
-    // 問題から一問削除
-    // 生成した要素をnewDivの先頭に追加
+    const br = document.createElement("br");
+    const btn = document.createElement("button");
+
+    const pronounce = () => {
+      let word = btn.textContent;
+      let u = new SpeechSynthesisUtterance();
+      u.lang = "en-US";
+      u.text = word;
+      speechSynthesis.speak(u);
+    };
+    btn.textContent = question_list.value[0][1];
     question_list.value.splice(0, 1);
-    newDiv.prepend(a);
+    newDiv.prepend(br);
+    newDiv.prepend(btn);
+
+    btn.style.fontSize = "2rem";
+    btn.style.border = "none";
+    btn.style.backgroundColor = "skyblue";
+    btn.style.borderRadius = "4%";
+
+    btn.addEventListener("click", () => {
+      pronounce();
+    });
     // テキストボックスを空に
     inputText.value = "";
     // カウントアップ
     correct_count++;
     question_count++;
   } else if (inputText.value == "pass") {
-    // passした時の処理
     const a = document.createElement("div");
-    a.textContent = question_list.value[0][1];
-    // テキストカラーを赤くする
-    a.style.color = "red";
+    const btn = document.createElement("button");
+    const br = document.createElement("br");
+
+    btn.classList.add("btn");
+    const pronounce = () => {
+      let word = btn.textContent;
+      let u = new SpeechSynthesisUtterance();
+      u.lang = "en-US";
+      u.text = word;
+      speechSynthesis.speak(u);
+    };
+
+    btn.textContent = question_list.value[0][1];
+
+    // buttonカラーを赤くする
+    btn.style.color = "white";
+    btn.style.fontSize = "2rem";
+    btn.style.border = "none";
+    btn.style.backgroundColor = "tomato";
+    btn.style.borderRadius = "4%";
 
     question_list.value.splice(0, 1);
-    newDiv.prepend(a);
+    newDiv.prepend(br);
+    newDiv.prepend(btn);
+
+    btn.addEventListener("click", () => {
+      pronounce();
+    });
     inputText.value = "";
     question_count++;
   }
