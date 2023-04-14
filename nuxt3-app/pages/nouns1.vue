@@ -123,7 +123,7 @@ watch(inputText, () => {
     const pronounce = () => {
       let word = btn.textContent;
       let u = new SpeechSynthesisUtterance();
-      u.lang = "en-US";
+      u.lang = "en";
       u.text = word;
       speechSynthesis.speak(u);
     };
@@ -154,7 +154,7 @@ watch(inputText, () => {
     const pronounce = () => {
       let word = btn.textContent;
       let u = new SpeechSynthesisUtterance();
-      u.lang = "en-US";
+      u.lang = "en";
       u.text = word;
       speechSynthesis.speak(u);
     };
