@@ -133,7 +133,7 @@ watch(inputText, () => {
     newDiv.prepend(btn);
 
     btn.style.fontSize = "2rem";
-    btn.style.border = "none";
+
     btn.style.backgroundColor = "skyblue";
     btn.style.borderRadius = "4%";
 
@@ -164,7 +164,7 @@ watch(inputText, () => {
     // buttonカラーを赤くする
     btn.style.color = "white";
     btn.style.fontSize = "2rem";
-    btn.style.border = "none";
+
     btn.style.backgroundColor = "tomato";
     btn.style.borderRadius = "4%";
 
